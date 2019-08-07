@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-face.css" rel="stylesheet" type="text/css"/>
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".cities").click(function () {
+                var city=$('a' , this).text();
+                $("#modal-span").html(city);
+            })
+
+        })
+
+
+    </script>
+    <style>
+
+        #myScroll {
+
+        }
+
+        p {
+            border: 1px solid #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .loading {
+            color: red;
+        }
+        .dynamic {
+            border-radius: 3px;
+            color:#000;
+
+            min-height:100px;
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        //--------------------------lazy script ---------------------------------------
+        var counter=0;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() == $(document).height() - $(window).height() && counter < 20) {
+                appendData();
+            }
+        });
+        function appendData() {
+            var html = '';
+            for (i = 0; i < 5; i++) {
+                html += '<div class="col-md-12 dynamic pad-0">'+
+
+                    '<div class="col-md-4 col-xs-12 pad-0 info-boxes hidden-sm ">'+
+                    '<div class="three-box border-info">'+
+                    '<div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">'+
+                    '<div class="img-div" >'+
+                    '<img src="img/n73.jpg" width="100%" height="100%"/>'+
+                    '</div>'+
+                    '</div>'+
+
+                    '<div class="col-md-6 pad-0  info-div col-xs-8" >'+
+                    '<div class=" pos-rel">'+
+                    '<span class="title">نوکیا n73 سالم و نوستالژی</span>'+
+                '<span class="mahale">تهرانپارس</span>'+
+                    '<span class="time">دقایقی پیش</span>'+
+                '</div>'+
+                '</div>'+
+                '<div class="col-md-12 pad-0 price-div col-xs-12">'+
+                    '<span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="col-md-4 col-xs-12 pad-0 info-boxes col-sm-6">'+
+                    '<div class="three-box border-info">'+
+                    '<div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">'+
+                    '<div class="img-div" >'+
+                    '<img src="img/n73.jpg" width="100%" height="100%"/>'+
+                    '</div>'+
+                    '</div>'+
+
+                    '<div class="col-md-6 pad-0  info-div col-xs-8" >'+
+                    '<div class=" pos-rel">'+
+                    '<span class="title">نوکیا n73 سالم و نوستالژی</span>'+
+                '<span class="mahale">تهرانپارس</span>'+
+                    '<span class="time">دقایقی پیش</span>'+
+                '</div>'+
+                '</div>'+
+                '<div class="col-md-12 pad-0 price-div col-xs-12">'+
+                    '<span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="col-md-4 col-xs-12 pad-0 info-boxes col-sm-6">'+
+                    '<div class="three-box border-info">'+
+                    '<div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">'+
+                    '<div class="img-div" >'+
+                    '<img src="img/n73.jpg" width="100%" height="100%"/>'+
+                    '</div>'+
+                    '</div>'+
+
+                   ' <div class="col-md-6 pad-0  info-div col-xs-8" >'+
+                    '<div class=" pos-rel">'+
+                    '<span class="title">نوکیا n73 سالم و نوستالژی</span>'+
+                '<span class="mahale">تهرانپارس</span>'+
+                    '<span class="time">دقایقی پیش</span>'+
+                '</div>'+
+                '</div>'+
+                '<div class="col-md-12 pad-0 price-div col-xs-12">'+
+                    '<span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>';
+            }
+            $('#myScroll').append(html);
+            counter++;
+
+            //if(counter==1)
+               // $('#myScroll').append('<button id="uniqueButton" style="margin-left: 50%; background-color: powderblue;">Click</button></br></br>');
+            //if(counter==2)
+              //  $('#myScroll').append('<button id="uniqueButton" style="margin-left: 50%; background-color: powderblue;">Click 22</button></br></br>');
+        }
+        //--------------------------lazy script ---------------------------------------
+    </script>
+
+    <script>
+        //----------------------  menu-toggle
+        $(document).ready(function () {
+            $('.hame-agahiha').click(function () {
+                $(this).css("background","rgba(0,0,0,.05)")
+                $('.center-menu-ch1').toggle();
+
+            })
+
+        });
+
+//----------------------  menu zir-menu
+        $(document).ready(function () {
+            $('.amlake-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.amlak').css("display","block");
+                $('.hame-agahiha').text("املاک");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.vasayele-naghliyeh-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.vasayele-naghliyeh').css("display","block");
+                $('.hame-agahiha').text("وسایل نقلیه");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.electronic-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.electronic').css("display","block");
+                $('.hame-agahiha').text("لوازم الکترونیکی");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.khaneh-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.khaneh').css("display","block");
+                $('.hame-agahiha').text("مربوط به خانه");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.khadamat-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.khadamat').css("display","block");
+                $('.hame-agahiha').text("خدمات");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.vasayele-shakhsi-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.vasayele-shakhsi').css("display","block");
+                $('.hame-agahiha').text("وسایل شخصی");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.sargarmi-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.sargarmi').css("display","block");
+                $('.hame-agahiha').text("سرگرمی و فراغت");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.ejtemaei-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.ejtemaei').css("display","block");
+                $('.hame-agahiha').text("اجتماعی");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.kar-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.kar').css("display","block");
+                $('.hame-agahiha').text("برای کسب و کار");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+        $(document).ready(function () {
+            $('.estekhdam-1').click(function () {
+                $('.ch-asli').css("display","none");
+                $('.estekhdam').css("display","block");
+                $('.hame-agahiha').text("استخدام و کاریابی");
+                $('.hame-agahiha-2').css("padding-right","10px")
+            })
+
+        });
+
+        //----------------------  menu-first-page
+        $(document).ready(function () {
+            $('.hame-agahiha-2').click(function () {
+                $('.hame-agahiha').text("همه آگهی ها");
+                $('.hame-agahiha-2').css("padding-right","0px");
+                $('.ch-asli').css("display","block");
+                $('.amlak').css("display","none");
+                $('.vasayele-naghliyeh').css("display","none");
+                $('.electronic').css("display","none");
+                $('.khaneh').css("display","none");
+                $('.khadamat').css("display","none");
+                $('.vasayele-shakhsi').css("display","none");
+                $('.sargarmi').css("display","none");
+                $('.ejtemaei').css("display","none");
+                $('.kar').css("display","none");
+                $('.estekhdam').css("display","none");
+
+            })
+
+        });
+
+
+    </script>
+</head>
+
+
+<body>
+
+<!-- -------------------Top Menu ---------------- -->
+<div class="header">
+            <nav class="navbar navbar-default navbar-fixed-top white">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header navbar-right ">
+                        <a class="navbar-brand logo pull-right" href="#"></a>
+
+                        <button type="button" style="margin-left: 8px ;" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only" >Toggle navigation</span>
+                            <span class="icon-bar" style="background-color: black!important;"></span>
+                            <span class="icon-bar" style="background-color: black!important;"></span>
+                            <span class="icon-bar" style="background-color: black!important;"></span>
+                            <button type="submit" class="btn ersal-btn hidden-md hidden-sm hidden-lg">ارسال </button>
+                            <button type="button" class="btn  slide btn-search pull-right  hidden-md hidden-sm hidden-lg" data-toggle="modal" data-target="#myModa2">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <span>تهران</span>
+
+                            </button>
+                        </button>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                        <form class="navbar-form navbar-left hidden-xs">
+                            <button type="submit" class="btn agahi-btn">ثبت رایگان آگهی </button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right city hidden-xs">
+                            <button type="button" class="btn  slide btn-search pull-right" data-toggle="modal" data-target="#myModal">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <span id="modal-span">تهران</span>
+
+                            </button>
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-left top-menu hidden-sm ">
+                            <li><a href="" >تماس با ما</a></li>
+                            <li> <a href="" >پشتیبانی و قوانین</a></li>
+                            <li><a href="" >بلاگ</a></li>
+                            <li><a href="" >درباره ما</a></li>
+                            <li> <a href="" >چت</a></li>
+                            <li><a href="" >دیوار من</a></li>
+                        </ul>
+
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+</div>
+
+
+
+<div class="container-fluid ">
+
+    <div class="row ">
+        <div class="col-md-12 pad-0 ">
+<!-- Right Menu --> <div class="col-md-2  pull-right  hidden-xs hidden-sm">
+                        <div class="right-menu-div">
+                            <div class="right-menu-div-child">
+                                    <a href="" class="right-menu active">همه آگهی‌ها</a>
+                                    <a href="" class="right-menu">          املاک</a>
+                                    <a href="" class="right-menu">وسایل نقلیه</a>
+                                    <a href="" class="right-menu">لوازم الکترونیکی</a>
+                                    <a href="" class="right-menu">مربوط به خانه</a>
+                                    <a href="" class="right-menu">خدمات</a>
+                                    <a href="" class="right-menu">وسایل شخصی</a>
+                                    <a href="" class="right-menu">سرگرمی و فراغت</a>
+                                    <a href="" class="right-menu">اجتماعی</a>
+                                    <a href="" class="right-menu">برای کسب و کار</a>
+                                    <a href="" class="right-menu">استخدام و کاریابی</a>
+                                    <a class="download-bazzar" href="" title="دریافت از بازار"></a>
+                                    <a class="download-appstore" href="" title="دریافت از اپ‌استور"></a>
+                            </div>
+                        </div>
+                    </div>
+<!-- CENTER-MD-8 --> <div class="col-md-8 pull-right  col-xs-12 col-sm-12">
+
+                        <div class="row">
+                        <div class="col-md-12  clearp under-header-div ">
+<!--search-select-option--> <div class="col-md-12 pad-0 col-xs-12 col-sm-12">
+                                <div class="col-md-4 pull-right col-xs-12">
+                                    <input type="text" placeholder="جستجو در همه آگهی‌ها" class="pull-right all-search"/>
+                                </div>
+                                <div class="col-md-4 pull-right col-xs-12 menu-center">
+                                    <div class="center-menu-p "><div class="hame-agahiha">همه آگهی ها<span class="glyphicon glyphicon-menu-down  pull-left"  aria-hidden="true"></span> </div>
+                                        <div class="center-menu-ch1">
+
+
+                                            <div class="center-menu-ch2 ch-asli" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  همه آگهی‌ها</div>
+
+                                            <!-- ----------   منو اول --------------->
+                                                <div href="" class="zirmenu amlake-1"> املاک<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu vasayele-naghliyeh-1">وسایل نقلیه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu electronic-1">لوازم الکترونیکی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu khaneh-1">مربوط به خانه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu khadamat-1">خدمات<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu vasayele-shakhsi-1">وسایل شخصی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu sargarmi-1">سرگرمی و فراغت<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu ejtemaei-1">اجتماعی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu kar-1">برای کسب و کار<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu estekhdam-1">استخدام و کاریابی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  املاک amlak" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">          املاک</div>
+                                                <div href="" class="zirmenu">فروش مسکونی (آپارتمان، خانه، زمین)<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">اجاره مسکونی (آپارتمان، خانه، زمین)<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">فروش اداری و تجاری (مغازه، دفتر کار، صنعتی)<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">اجاره اداری و تجاری (مغازه، دفتر کار، صنعتی)<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">خدمات املاک<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  وسایل نقلیه vasayele-naghliyeh" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">وسایل نقلیه</div>
+                                                <div href="" class="zirmenu">خودرو<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">قطعات یدکی و لوازم جانبی خودرو<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">موتورسیکلت و لوازم جانبی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">قایق و لوازم جانبی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  لوازم-الکترونیک  electronic" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">لوازم الکترونیکی</div>
+                                                <div href="" class="zirmenu">موبایل و تبلت<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">رایانه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">کنسول، بازی‌ ویدئویی و آنلاین</div>
+                                                <div href="" class="zirmenu">صوتی و تصویری<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">تلفن رومیزی</div>
+                                            </div>
+                                            <div class="center-menu-ch2  خانه  khaneh" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">وسایل و تزئینات خانه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">وسایل آشپزخانه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">ابزار<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">ساختمان و حیاط<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+
+                                            </div>
+                                            <div class="center-menu-ch2  خدمات  khadamat" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">خدمات</div>
+                                                <div href="" class="zirmenu">موتور و ماشین</div>
+                                                <div href="" class="zirmenu">پذیرایی/مراسم</div>
+                                                <div href="" class="zirmenu">خدمات رایانه‌ای و موبایل<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">مالی/حسابداری/بیمه</div>
+                                                <div href="" class="zirmenu">حمل و نقل</div>
+                                                <div href="" class="zirmenu">پیشه و مهارت</div>
+                                                <div href="" class="zirmenu">آرایشگری و زیبایی</div>
+                                                <div href="" class="zirmenu">سرگرمی</div>
+                                                <div href="" class="zirmenu">نظافت</div>
+                                                <div href="" class="zirmenu">باغبانی و درختکاری</div>
+                                                <div href="" class="zirmenu">آموزشی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  وسایل شخصی  vasayele-shakhsi" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">وسایل شخصی</div>
+                                                <div href="" class="zirmenu">کیف، کفش و لباس<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">لوازم التحریر</div>
+                                                <div href="" class="zirmenu">تزیینی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">آرایشی، بهداشتی و درمانی</div>
+                                                <div href="" class="zirmenu">کفش و لباس بچه</div>
+                                                <div href="" class="zirmenu">وسایل بچه و اسباب بازی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  سرگرمی  sargarmi" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">سرگرمی و فراغت</div>
+                                                <div href="" class="zirmenu">بلیط<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">تور و چارتر</div>
+                                                <div href="" class="zirmenu">کتاب و مجله<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">دوچرخه/اسکیت/اسکوتر</div>
+                                                <div href="" class="zirmenu">حیوانات<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">کلکسیون و سرگرمی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">آلات موسیقی<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">ورزش و تناسب اندام<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">اسباب‌ بازی</div>
+                                            </div>
+                                            <div class="center-menu-ch2  اجتماعی  ejtemaei" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">اجتماعی</div>
+                                                <div href="" class="zirmenu">رویداد<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">گم‌شده‌ها<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">داوطلبانه<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                            </div>
+                                            <div class="center-menu-ch2  برای کسب و کار  kar" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">برای کسب و کار</div>
+                                                <div href="" class="zirmenu">تجهیزات و ماشین‌آلات<span class="glyphicon glyphicon-menu-left  pull-left"  aria-hidden="true"></span></div>
+                                                <div href="" class="zirmenu">عمده فروشی</div>
+                                            </div>
+                                            <div class="center-menu-ch2  استخدام و کاریابی  estekhdam" >
+                                                <div href="" class="zirmenu hame-agahiha-2">  <span class="glyphicon glyphicon-menu-right  pull-right"  aria-hidden="true"></span> همه آگهی‌ها </div>
+                                                <div href="" class="zirmenu">استخدام و کاریابی</div>
+                                                <div href="" class="zirmenu">اداری و مدیریت</div>
+                                                <div href="" class="zirmenu">سرایداری و نظافت</div>
+                                                <div href="" class="zirmenu">معماری ،عمران و ساختمانی</div>
+                                                <div href="" class="zirmenu">خدمات فروشگاه و رستوران</div>
+                                                <div href="" class="zirmenu">رایانه و فناوری اطلاعات</div>
+                                                <div href="" class="zirmenu">مالی و حسابداری و حقوقی</div>
+                                                <div href="" class="zirmenu">بازاریابی و فروش</div>
+                                                <div href="" class="zirmenu">صنعتی و فنی و مهندسی</div>
+                                                <div href="" class="zirmenu">آموزشی</div>
+                                                <div href="" class="zirmenu">حمل و نقل</div>
+                                                <div href="" class="zirmenu">درمانی و زیبایی و بهداشتی</div>
+                                                <div href="" class="zirmenu">هنری و رسانه</div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 pull-right col-xs-12">
+                                    <select class="pull-right">
+                                        <option value="همه محله ها" class="pull-right">همه محله ها</option>
+                                        <option value="آجودانیه">آجودانیه</option>
+                                        <option value="آذربایجان">آذربایجان</option>
+                                        <option value="آذری">آذری</option>
+                                        <option value="آرارات">آرارات</option>
+                                        <option value="آرژانتین">آرژانتین</option>
+                                        <option value="آزاد شهر">آزاد شهر</option>
+                                        <option value="آهنگ">آهنگ</option>
+                                        <option value="ابراهیم‌آباد">ابراهیم‌آباد</option>
+                                        <option value="برای کسب و کار">ابوذر</option>
+                                        <option value="استخدام و کاریابی">احتشامیه</option>
+                                    </select>
+                                </div>
+                            </div>
+<!-- -Beauty CheckBox-->    <div class="col-md-12 pad-0 col-xs-12 col-sm-12">
+                                <div class="col-md-5 pull-right checkbox-div col-md-offset-5 col-xs-12 col-sm-6">
+                    <!------ Include the above in your HEAD tag ---------->
+                                    <span>عکس دار</span>
+                                    <div class="card" >
+                                    <!-- Default panel contents -->
+                                        <label class="switch ">
+                                           <input type="checkbox" class="danger">
+                                           <span class="slider"></span>
+                                        </label>
+                                    </div>
+
+                                    <span>فوری</span>
+                                    <div class="card" >
+                                    <!-- Default panel contents -->
+                                        <label class="switch ">
+                                            <input type="checkbox" class="danger">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                            </div>
+                                <div class="col-md-2  pull-left col-xs-12 col-sm-6">
+                                <div class="dokmeh-jostejo">
+                                    <a href="">جستجو</a>
+                                </div>
+                           </div>
+                            </div>
+<!-- -2ta icon-->           <div class="col-md-12 pad-0">
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+<!-- myScroll -->       <div class="col-md-12 pad-0 ">
+                            <div id="myScroll">
+                                    <div class="col-md-12 dynamic pad-0" >
+                                        <div class="col-md-4 col-xs-12 pad-0 hidden-sm info-boxes ">
+                                            <div class="three-box border-info">
+                                                <div class="col-md-6 col-xs-4  pad-0 " style="height: 90%;">
+                                                    <div class="img-div" >
+                                                        <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                    <div class=" pos-rel">
+                                                        <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                        <span class="mahale">تهرانپارس</span>
+                                                        <span class="time">دقایقی پیش</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                    <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                            <div class="three-box border-info">
+                                                <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                    <div class="img-div" >
+                                                        <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                    <div class=" pos-rel">
+                                                        <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                        <span class="mahale">تهرانپارس</span>
+                                                        <span class="time">دقایقی پیش</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                    <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                            <div class="three-box border-info">
+                                                <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                    <div class="img-div" >
+                                                        <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                    <div class=" pos-rel">
+                                                        <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                        <span class="mahale">تهرانپارس</span>
+                                                        <span class="time">دقایقی پیش</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 pad-0 price-div col-xs-12 ">
+                                                    <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-md-12 dynamic pad-0" >
+                                    <div class="col-md-4 col-xs-12 pad-0 hidden-sm info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4  pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12 ">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 dynamic pad-0" >
+                                    <div class="col-md-4 col-xs-12 pad-0 hidden-sm info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4  pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12 ">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 dynamic pad-0" >
+                                    <div class="col-md-4 col-xs-12 pad-0 hidden-sm info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4  pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12 ">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 dynamic pad-0" >
+                                    <div class="col-md-4 col-xs-12 pad-0 hidden-sm info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4  pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12 pad-0 col-sm-6 info-boxes ">
+                                        <div class="three-box border-info">
+                                            <div class="col-md-6 col-xs-4 pad-0 " style="height: 90%;">
+                                                <div class="img-div" >
+                                                    <img src="img/n73.jpg" width="100%" height="100%"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pad-0  info-div col-xs-8 " >
+                                                <div class=" pos-rel">
+                                                    <span class="title">نوکیا n73 سالم و نوستالژی</span>
+                                                    <span class="mahale">تهرانپارس</span>
+                                                    <span class="time">دقایقی پیش</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pad-0 price-div col-xs-12 ">
+                                                <span class="pull-right price">قیمت: ۳۰۰٫۰۰۰ تومان</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        </div>
+                        </div>
+
+                    </div>
+            <div class="col-md-2  pull-right hidden-xs  hidden-sm "></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal 1------------------------------------------------------------------------------------------------------>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title modal-titr" id="myModalLabel">انتخاب شهر</h4>
+
+            </div>
+            <div class="modal-body ">
+                <div class="col-md-12  search-div">
+                    <input type="text" placeholder="جست‌و‌جوی سریع نام شهر..." class="search"/>
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link" id="teh" >تبریز</a></div>
+                    <div class="cities" ><a href="" id="esf" onclick="fn()">اصفهان</a></div>
+                    <div class="cities"><a href="" >مشهد</a></div>
+                    <div class="cities"><a href="" >کرج</a></div>
+                    <div class="cities mrgr-0 active"><a href="" class="">تهران</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">ارومیه</a></div>
+                    <div class="cities"><a href="" >کرمانشاه</a></div>
+                    <div class="cities"><a href="" >قم</a></div>
+                    <div class="cities"><a href="" >اهواز</a></div>
+                    <div class="cities mrgr-0"><a href="">شیراز</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">اراک</a></div>
+                    <div class="cities"><a href="" >همدان</a></div>
+                    <div class="cities"><a href="" >کرمان</a></div>
+                    <div class="cities"><a href="" >رشت</a></div>
+                    <div class="cities mrgr-0"><a href="">زاهدان</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">زنجان</a></div>
+                    <div class="cities"><a href="" >قزوین</a></div>
+                    <div class="cities"><a href="" >بندرعباس</a></div>
+                    <div class="cities"><a href="" >اردبیل</a></div>
+                    <div class="cities mrgr-0"><a href="">یزد</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">بوشهر</a></div>
+                    <div class="cities"><a href="" >آبادان</a></div>
+                    <div class="cities"><a href="" >دزفول</a></div>
+                    <div class="cities"><a href="" >ساری</a></div>
+                    <div class="cities mrgr-0"><a href="">گرگان</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">کاشان</a></div>
+                    <div class="cities"><a href="" >اسلام‌شهر</a></div>
+                    <div class="cities"><a href="" >سنندج</a></div>
+                    <div class="cities"><a href="" >خرم‌آباد</a></div>
+                    <div class="cities mrgr-0"><a href="">بروجرد</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">سمنان</a></div>
+                    <div class="cities"><a href="" >بیرجند</a></div>
+                    <div class="cities"><a href="" >کیش</a></div>
+                    <div class="cities"><a href="" >ایلام</a></div>
+                    <div class="cities mrgr-0"><a href="">نجف‌آباد</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">بهبهان</a></div>
+                    <div class="cities"><a href="" >بجنورد</a></div>
+                    <div class="cities"><a href="" >یاسوج</a></div>
+                    <div class="cities"><a href="" >بندر ماهشهر</a></div>
+                    <div class="cities mrgr-0"><a href="">شهرکرد</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">قشم</a></div>
+                    <div class="cities"><a href="" >شوشتر</a></div>
+                    <div class="cities"><a href="" >نیشابور</a></div>
+                    <div class="cities"><a href="" >مسجد سلیمان</a></div>
+                    <div class="cities mrgr-0"><a href="">سبزوار</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">ساوه</a></div>
+                    <div class="cities"><a href="" >قائم‌شهر</a></div>
+                    <div class="cities"><a href="" >بابل</a></div>
+                    <div class="cities"><a href="" >آمل</a></div>
+                    <div class="cities mrgr-0"><a href="">بانه</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">بابلسر</a></div>
+                    <div class="cities"><a href="" >نوشهر</a></div>
+                    <div class="cities"><a href="" >بندر انزلی</a></div>
+                    <div class="cities"><a href="" >شاهرود</a></div>
+                    <div class="cities mrgr-0"><a href="">زابل</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">چابهار</a></div>
+                    <div class="cities"><a href="" >لاهیجان</a></div>
+                    <div class="cities"><a href="" >رامسر</a></div>
+                    <div class="cities"><a href="" >نور</a></div>
+                    <div class="cities mrgr-0"><a href="">گنبد کاووس</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links">
+                    <div class="cities"><a href="" class="link">دورود</a></div>
+                    <div class="cities"><a href="" >بندر ترکمن</a></div>
+                    <div class="cities"><a href="" >کردکوی</a></div>
+                    <div class="cities"><a href="" >گمیشان</a></div>
+                    <div class="cities mrgr-0"><a href="">آق قلا</a></div>
+                </div>
+                <div class="col-md-12 pad-0 links last-link">
+                    <div class="cities"><a href="" >سوسنگرد</a></div>
+                    <div class="cities"><a href="" >شوش</a></div>
+                    <div class="cities"><a href="" >نورآباد</a></div>
+
+                </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal ------------------------------------------------------------------------------------------------------>
+>
+<!-- Modal 2 mobile------------------------------------------------------------------------------------------------------>
+<div class="modal fade" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title modal-titr" id="myModalLabe2">انتخاب شهر</h4>
+
+            </div>
+         
+            <div class="modal-footer ">
+                <select class="modal-btn">
+                    <option  class="modal-option" value="تهران">تهران</option>
+                    <option value="کرج">کرج</option>
+                    <option value="مشهد">مشهد</option>
+                    <option value="تبریز">تبریز</option>
+                    <option value="شیراز">شیراز</option>
+                    <option value="اهواز">اهواز</option>
+                    <option value="قم">قم</option>
+                    <option value="کرمانشاه">کرمانشاه</option>
+                    <option value="ارومیه">ارومیه</option>
+                    <option value="زاهدان">زاهدان</option>
+                    <option value="رشت">رشت</option>
+                    <option value="کرمان">کرمان</option>
+                    <option value="همدان">همدان</option>
+                    <option value="اراک">اراک</option>
+                    <option value="یزد">یزد</option>
+                    <option value="اردبیل">اردبیل</option>
+                    <option value="بندرعباس">بندرعباس</option>
+                    <option value="قزوین">قزوین</option>
+                    <option value="زنجان">زنجان</option>
+                    <option value="گرگان">گرگان</option>
+                    <option value="ساری">ساری</option>
+                    <option value="دزفول">دزفول</option>
+                    <option value="آبادان">آبادان</option>
+                    <option value="بوشهر">بوشهر</option>
+                    <option value="بروجرد">بروجرد</option>
+                    <option value="خرم‌آباد">خرم‌آباد</option>
+                    <option value="سنندج">سنندج</option>
+                    <option value="اسلام‌شهر">اسلام‌شهر</option>
+                    <option value="کاشان">کاشان</option>
+                    <option value="نجف‌آباد">نجف‌آباد</option>
+                    <option value="ایلام">ایلام</option>
+                    <option value="کیش">کیش</option>
+                    <option value="بیرجند">بیرجند</option>
+                    <option value="سمنان">سمنان</option>
+                    <option value="شهرکرد">شهرکرد</option>
+                    <option value="بندر ماهشهر">بندر ماهشهر</option>
+                    <option value="یاسوج">یاسوج</option>
+                    <option value="بجنورد">بجنورد</option>
+                    <option value="بهبهان">بهبهان</option>
+                    <option value="سبزوار">سبزوار</option>
+                    <option value="مسجد سلیمان">مسجد سلیمان</option>
+                    <option value="نیشابور">نیشابور</option>
+                    <option value="شوشتر">شوشتر</option>
+                    <option value="قشم">قشم</option>
+                    <option value="بانه">بانه</option>
+                    <option value="بابل">بابل</option>
+                    <option value="قائم‌شهر">قائم‌شهر</option>
+                    <option value="ساوه">ساوه</option>
+                    <option value="زابل">زابل</option>
+                    <option value="شاهرود">شاهرود</option>
+                    <option value="انزلی">انزلی</option>
+                    <option value="نوشهر">نوشهر</option>
+                    <option value="بابلسر">بابلسر</option>
+                    <option value="گنبد کاووس">گنبد کاووس</option>
+                    <option value="نور">نور</option>
+                    <option value="رامسر">رامسر</option>
+                    <option value="لاهیجان">لاهیجان</option>
+                    <option value="چابهار">چابهار</option>
+                    <option value="آق قلا">آق قلا</option>
+                    <option value="نوشهر">نورآباد</option>
+                    <option value="نوشهر">شوش</option>
+                    <option value="نوشهر">سوسنگرد</option>
+                </select>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- Moda2 ------------------------------------------------------------------------------------------------------>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
